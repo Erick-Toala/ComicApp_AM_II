@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ComicApp</string>
+
+    <string name="txtdatos">Registrarse</string>
+    <string name="txtuemail">Correo Electronico</string>
+    <string name="hint_correo">Introduce tu correo</string>
+    <string name="txtusuario">Usuario</string>
+    <string name="hint_nombre">Introduce tu nombre</string>
+    <string name="txtcontraseña">Contraseña</string>
+    <string name="hint_contra">Introduce tu contraseña</string>
+    <string name="txtnacimiento">Fecha de nacimiento</string>
+    <string name="boton">Registrarse</string>
+
+    <string name="txtinicio">Iniciar Sesion</string>
+    <string name="txtusuario2">Usuario</string>
+    <string name="txtnombreusuario">Ingresa tu Usuario</string>
+    <string name="txtcontrausuario">Contraseña</string>
+    <string name="txtcontraseñausuario">Ingresa tu Contraseña</string>
+
+    <string name="txtcategoria">Crear Categoria</string>
+    <string name="txttitulocategoria">        Titulo</string>
+    <string name="new_user_signup">¿No tienes cuenta? Regístrate</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

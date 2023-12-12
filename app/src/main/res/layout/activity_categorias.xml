@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondocomic"
+    tools:context=".CategoriasActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/orange">
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="COMICAPP"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/subtitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titulo"
+            android:layout_centerHorizontal="true"
+            android:text="Categorias"
+            android:textColor="@color/white" />
+
+        <ImageButton
+            android:id="@+id/salirBoton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icono_salir" />
+    </RelativeLayout>
+
+    <!--Buscar -->
+    <EditText
+        android:id="@+id/buscarEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolTitulo"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/icono_buscar_gris"
+        android:hint="Buscar"
+        android:padding="10dp"
+        android:textColorHint="@color/gris1"/>
+
+    <!--Categorias (este si)
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoriasRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/buscarEt"
+        android:layout_above="@id/botonLl"
+        android:layout_margin="5dp"
+        tools:listitem="@layout/fila_categoria"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    -->
+
+    <!--Categoria 1 solo prueba-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CategoriaCienciaFiccionCw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buscarEt"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/categoriaTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="Ciencia Ficción"
+                android:textColor="@color/black" />
+
+            <ImageButton
+                android:id="@+id/eliminarBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/forma_boton_eliminar_categoria"
+                android:src="@drawable/icono_eliminar_blanco" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!--Categoria 1 solo prueba-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CategoriaCienciaFiccionCw2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CategoriaCienciaFiccionCw"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/categoriaTv2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="Drama"
+                android:textColor="@color/black" />
+
+            <ImageButton
+                android:id="@+id/eliminarBtn2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/forma_boton_eliminar_categoria"
+                android:src="@drawable/icono_eliminar_blanco" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!--Categoria 1 solo prueba-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CategoriaCienciaFiccionCw3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CategoriaCienciaFiccionCw2"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/categoriaTv3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="Acción"
+                android:textColor="@color/black" />
+
+            <ImageButton
+                android:id="@+id/eliminarBtn3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/forma_boton_eliminar_categoria"
+                android:src="@drawable/icono_eliminar_blanco" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!--Categoria 1 solo prueba-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CategoriaCienciaFiccionCw4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CategoriaCienciaFiccionCw3"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/categoriaTv4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="Aventura"
+                android:textColor="@color/black" />
+
+            <ImageButton
+                android:id="@+id/eliminarBtn4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/forma_boton_eliminar_categoria"
+                android:src="@drawable/icono_eliminar_blanco" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <LinearLayout
+        android:id="@+id/botonLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/botonCrearCategoria"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/orange"
+            android:minHeight="50dp"
+            android:text="+ Crear Categoria"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_marginEnd="2dp"/>
+        <Button
+            android:id="@+id/botonAnadirComic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/orange"
+            android:minHeight="50dp"
+            android:text="+ Añadir Comic"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_marginStart="2dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

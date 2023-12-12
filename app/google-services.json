@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "232241704664",
+    "project_id": "comic-app-kotlin-8a7d2",
+    "storage_bucket": "comic-app-kotlin-8a7d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232241704664:android:bb1643a9df31102ecc31ad",
+        "android_client_info": {
+          "package_name": "com.etoala.comicapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJMSjJzETG27Xj4je3KnS9AxvT4hws08A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

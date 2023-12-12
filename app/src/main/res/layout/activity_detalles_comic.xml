@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondocomic"
+    tools:context=".DetallesComicActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/forma_toolbar1">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icono_atras_blanco" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detalles del comic"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_above="@id/comicOptionsLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/toolbarRl">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Info comic -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--Comic prevista -->
+                <RelativeLayout
+                    android:id="@+id/comicRl"
+                    android:layout_width="110dp"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/gris02">
+
+                    <com.github.barteksc.pdfviewer.PDFView
+                        android:id="@+id/pdfView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </RelativeLayout>
+
+                <!--Comic titulo -->
+                <TextView
+                    android:id="@+id/titleTv"
+                    style="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/comicRl"
+                    android:text="Nombre del Comic"/>
+
+                <!--tabla de info -->
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleTv"
+                    android:layout_toEndOf="@id/comicRl">
+
+                    <!--fila categoria -->
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/categoryLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Categoria:"
+                            android:layout_marginEnd="5dp"/>
+
+                        <TextView
+                            android:id="@+id/categoryTv"
+                            android:layout_weight="1"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="N/A"
+                            android:layout_marginEnd="5dp"/>
+                    </TableRow>
+
+                    <!--fila fecha -->
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/dateLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fecha:"
+                            android:layout_marginEnd="5dp"/>
+
+                        <TextView
+                            android:id="@+id/dateTv"
+                            android:layout_weight="1"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="N/A"
+                            android:layout_marginEnd="5dp"/>
+                    </TableRow>
+
+                    <!--fila tamaño -->
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/sizeLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tamaño:"
+                            android:layout_marginEnd="5dp"/>
+
+                        <TextView
+                            android:id="@+id/sizeTv"
+                            android:layout_weight="1"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="N/A"
+                            android:layout_marginEnd="5dp"/>
+                    </TableRow>
+
+                    <!--fila vistas -->
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/viewsLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vistas:"
+                            android:layout_marginEnd="5dp"/>
+
+                        <TextView
+                            android:id="@+id/viewsTv"
+                            android:layout_weight="1"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="N/A"
+                            android:layout_marginEnd="5dp"/>
+                    </TableRow>
+
+                    <!--fila descargas -->
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/downloadsLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Descargas:"
+                            android:layout_marginEnd="5dp"/>
+
+                        <TextView
+                            android:id="@+id/downloadsTv"
+                            android:layout_weight="1"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="N/A"
+                            android:layout_marginEnd="5dp"/>
+                    </TableRow>
+
+                    <!--fila paginas -->
+                    <TableRow
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/pagesLabelTv"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Páginas:"
+                            android:layout_marginEnd="5dp"/>
+
+                        <TextView
+                            android:id="@+id/pagesTv"
+                            android:layout_weight="1"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="N/A"
+                            android:layout_marginEnd="5dp"/>
+                    </TableRow>
+
+                </TableLayout>
+
+            </RelativeLayout>
+
+            <!--comic descripcion -->
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/descriptionLabelTv"
+                style="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción:"
+                android:layout_marginEnd="5dp"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:id="@+id/descriptionTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="La descripción del Comic"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--botón para leer comic -->
+    <LinearLayout
+        android:id="@+id/comicOptionsLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/design_default_color_primary">
+
+        <Button
+            android:id="@+id/readComicBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="LEER"
+            android:textSize="10sp"
+            android:drawableTop="@drawable/ic_book_blanco"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/downloadComicBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_descargar_blanco"
+            android:text="DESCARGAR"
+            android:textSize="10sp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/favoriteComicBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_favorite_border_blanco"
+            android:text="Añadir Favorito"
+            android:textSize="10sp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+</RelativeLayout>

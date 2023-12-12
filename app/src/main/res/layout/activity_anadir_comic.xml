@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondocomic">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/shape_toolbar01">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/icono_atras_blanco"/>
+
+        <ImageView
+            android:id="@+id/icoIv"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/backBtn"
+            android:src="@drawable/logocomic"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icoIv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Añadir un nuevo Comic"
+            android:textColor="@color/white"
+            android:textSize="28sp"/>
+
+        <ImageButton
+            android:id="@+id/attachPdfBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_adjuntar_blanco" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/descriptionTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@id/titleTil"
+        android:layout_marginTop="5dp"
+        app:hintEnabled="false">
+
+        <EditText
+            android:id="@+id/descriptionEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_editext01"
+            android:drawableStart="@drawable/ic_boock_gris"
+            android:drawablePadding="10dp"
+            android:hint="Descripción"
+            android:inputType="textMultiLine|textCapSentences"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textColorHint="@color/gris01"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/titleTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="235dp"
+        app:hintEnabled="false">
+
+        <EditText
+            android:id="@+id/titleEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_editext01"
+            android:drawableStart="@drawable/ic_boock_gris"
+            android:drawablePadding="10dp"
+            android:hint="Nombre del Comic"
+            android:inputType="textPersonName|textCapWords"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textColorHint="@color/gris01"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/categoryTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descriptionTil"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_editext01"
+        android:drawableStart="@drawable/ic_category_gris"
+        android:drawableEnd="@drawable/ic_bajar_gris"
+        android:drawablePadding="10dp"
+        android:padding="10dp"
+        android:hint="Categoría del Comic"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gris01"
+        android:textSize="16sp"/>
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categoryTv"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_button"
+        android:text="Guardar"
+        android:textColor="@color/white"/>
+
+
+</RelativeLayout>
